@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: Admin@123
+    url: jdbc:postgresql://localhost:5432/interview_service
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    database: postgresql
+  sql:
+    init:
+      platform: postgres
+      mode: always
+      continue-on-error: true
+server:
+  servlet:
+    context-path: /interview/v1/api
+  port: '8080'
